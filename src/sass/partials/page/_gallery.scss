@@ -13,8 +13,14 @@
     box-sizing:border-box;
     width:(100%-$grid-gutter)/2;
     margin-left:$grid-gutter;
+    border:1px solid #f7f7f7;
+    @include transition-property(border-color);
+    @include transition-duration(.2s);
 
-    
+    &:hover,
+    &:active{
+        border-color:$primary;
+    }
 
     &:nth-child(2n+1){
         margin-left:0;

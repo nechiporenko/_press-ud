@@ -1500,7 +1500,16 @@ img.g-full-width, img.g-table, img.banner__img {
   margin-bottom: 1.125rem;
   box-sizing: border-box;
   width: 48.821174201%;
-  margin-left: 2.3576515979%; }
+  margin-left: 2.3576515979%;
+  border: 1px solid #f7f7f7;
+  -webkit-transition-property: border-color;
+  -moz-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  transition-duration: .2s; }
+  .gallery__item:hover, .gallery__item:active {
+    border-color: #8cb53d; }
   .gallery__item:nth-child(2n+1) {
     margin-left: 0; }
   @media screen and (min-width: 28.125em)  {
