@@ -1,0 +1,45 @@
+﻿@import "../modules/_base.scss";
+
+@import "page/_breadcrumbs.scss";
+@import "page/_scroll-up.scss";
+@import "page/_basics.scss";
+@import "page/_b-about.scss";
+
+
+.page{
+    @extend .g-container;
+}
+.page__row{
+    @extend .g-row;
+}
+.page__main,
+.page__side{
+    @extend .g-col;
+    @include px2rem(padding, 0 20px 18px);
+    background:#fff;
+    @include font-size(14px);
+}
+
+.page__main{
+    @include media($tablet){
+        width:57.5%;
+    }
+}
+.page__side{
+    @include media($tablet){
+        width:(42.5% - $grid-gutter);
+    }
+}
+.page__title{
+    display:block;
+    @include px2rem(margin,0 -20px 18px);
+    @include px2rem(padding, 17px 20px);
+    font-family:$font-title;
+    font-weight:700;
+    text-transform:uppercase;
+    line-height:strip-units($project-line-height/16);
+    @include font-size(18px);
+    @include px2rem(letter-spacing, 1.5px);
+    color:$primary-alt;
+    background:#ddd;
+}

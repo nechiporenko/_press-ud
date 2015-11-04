@@ -1,0 +1,35 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Social Links*/
+.social{
+    list-style-type:none;
+    padding:0;
+    font-size:0;
+    @include px2rem(margin, 36px 0 18px);
+}
+.social__item{
+    display:inline-block;
+    @include font-size(16px);
+    @include px2rem(margin-left, 9px);
+    &:first-child{
+        margin-left:0;
+    }
+}
+.social__link{
+    display:block;
+    @include px2rem(height, 32px);
+    @include px2rem(width, 32px);
+    @include px2rem(line-height, 32px);
+    text-align:center;
+    color:#fff;
+    background:#c1c1c1;
+    text-decoration:none;
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    &:hover,
+    &:active{
+        background:$primary;
+    }
+}

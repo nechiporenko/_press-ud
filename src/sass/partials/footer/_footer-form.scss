@@ -1,0 +1,17 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Contact Form*/
+.b-form{
+}
+.b-form__title{
+    @extend .g-title-h1;
+    color:$primary;
+    line-height:1;
+}
+.b-form__btn{
+    @extend .g-btn;
+    width:100%;
+    @include px2rem(height, 54px);
+    @include px2rem(line-height, 52px);
+    @include px2rem(margin-bottom, 36px);
+    @include font-size(18px);
+}

@@ -1,0 +1,56 @@
+@import "../modules/base";
+
+@import "footer/_footer-contacts.scss";
+@import "footer/_footer-form.scss";
+@import "footer/_social.scss";
+
+/*Page Footer*/
+.footer{
+}
+.footer__container{
+    @extend .g-container;
+}
+.footer__top{
+    @include px2rem(padding, 18px 0 0);
+    background:#e8e8e8;
+    overflow:hidden;
+}
+.footer__main,
+.footer__side{
+    @extend .g-col;
+}
+.footer__main{
+    @include media($tablet){
+        width:57.5%;
+    }
+}
+.footer__side{
+    position:relative;
+    z-index:0;
+
+    &:before{
+        content:'';
+        position:absolute;
+        @include px2rem(top, -18px);
+        @include px2rem(left, -22px);
+        bottom:0;
+        width:300%;
+        background:#ddd;
+        z-index:-1;
+        display:none;
+    }
+
+    @include media($tablet){
+        width:(42.5% - $grid-gutter);
+    }
+    @include media($desktop){
+        &:before{
+            display:block;
+        }
+    }
+}
+
+.footer__bottom{
+    background:$primary;
+    @include px2rem(padding, 18px 0);
+}

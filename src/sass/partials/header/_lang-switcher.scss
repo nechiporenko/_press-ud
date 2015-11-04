@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*Header Lang Switcher*/
+.lang-swither{
+    float:left;
+    position:relative;
+    @include font-size(14px);
+    text-transform:uppercase;
+}
+.lang-swither__btn{
+    margin:0;
+    border:none;
+    background:transparent;
+    @include px2rem(padding, 0 9px 6px 0);
+    @include font-size(14px);
+    text-transform:uppercase;
+    color:$primary-alt;
+    @include transition(.2s linear padding);
+
+    &:focus,
+    &:active,
+    &.active{
+        @include px2rem(padding-left, 9px);
+        background:$primary-alt;
+        color:#fff;
+        outline:0;
+    }
+}
+.lang-swither__list{
+    @extend .g-clear-list;
+    position:absolute;
+    top:100%; left:0;
+    z-index:2;
+    width:100%;
+    display:none;
+}
+.lang-swither__item{
+    display:block;
+    border-top:1px solid lighten($primary-alt, 5%);
+    border-bottom:1px solid darken($primary-alt, 5%);
+    &:last-child{
+        border-bottom:none;
+    }
+}
+.lang-swither__link{
+    display:block;
+    @include px2rem(padding, 6px 9px);
+    text-decoration:none;
+    background:$primary-alt;
+    color:#fff;
+    &:hover,
+    &:active{
+        background:lighten($primary-alt, 20%);
+    }
+}

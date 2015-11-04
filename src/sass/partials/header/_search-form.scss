@@ -1,0 +1,53 @@
+﻿@import "../../modules/_base.scss";
+/*Header Search Form*/
+.search-form{
+    position:relative;
+    width:100%;
+    
+    &:before{
+        content:'\e800';
+        font-family:'fontello';
+        color:$border-color;
+        @include font-size(14px);
+        position:absolute;
+        @include px2rem(top, 5px);
+        @include px2rem(left, 6px);
+    }
+}
+.search-form__input{
+    display:block;
+    @include px2rem(height, 28px);
+    border:1px solid $border-color;
+    @include px2rem(padding, 0 80px 0 30px);
+    @include font-size(16px);
+    box-sizing:border-box !important;
+    width:100%;
+    color:$primary-alt;
+
+    &:hover,
+    &:focus{
+        border-color:$primary-alt;
+        outline:0;
+    }
+}
+.search-form__btn{
+    border:1px solid $primary-alt;
+    @include px2rem(height, 28px);
+    @include px2rem(line-height, 26px);
+    @include px2rem(padding, 0 8px);
+    margin:0;
+    color:#fff;
+    background:$primary-alt;
+    @include font-size(14px);
+    text-transform:uppercase;
+    box-sizing:border-box;
+    position:absolute;
+    top:0; right:0;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background:lighten($primary-alt, 20%);
+        outline:0;
+    }
+}

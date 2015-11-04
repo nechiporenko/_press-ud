@@ -1,0 +1,134 @@
+﻿/* Desktop Menu */
+@import "../../modules/_base.scss";
+.menu{
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    line-height:100%;
+    position:relative;
+    z-index:1000;
+    @extend .g-clear-list;
+    box-sizing:border-box;
+}
+
+.menu__item{
+    display:table-cell;
+    position:relative;
+    line-height:inherit;
+	top:0;left:0;
+    @include font-size(16px);
+    border-right:1px solid darken($primary, 5%);
+    border-left:1px solid lighten($primary, 5%);
+
+    &:first-child{
+        border-left:none;
+    }
+    &:last-child{
+        border-right:none;
+    }
+}
+
+.menu__link,
+.submenu__link{
+    display:block;
+    position:relative;
+    line-height:100%;
+    top:0;left:0;
+    @include px2rem(padding, 10px 0);
+	text-decoration:none;
+    text-align:center;
+	color: #fff;
+}
+
+.menu__link{
+    background:$primary;
+
+    &:hover,
+    &:active{
+        background:lighten($primary-alt, 20%);
+    }
+
+    &.hover{
+        background:$primary-alt;
+    }
+}
+
+.menu__link--current{
+    background:$primary-alt;
+    cursor:default;
+}
+
+.submenu{
+    @extend .g-clear-list;
+    width:100%;
+    position: absolute;
+    top:100%;left:0;
+    display:none;
+    background:$primary-alt;
+    box-sizing:border-box;
+
+    .submenu{
+        @include px2rem(top, -2px);
+        left:100%; 
+        box-sizing:border-box;
+    }
+}
+.submenu__item{
+    display:block;
+    position:relative;
+    border-top:1px solid lighten($primary-alt, 5%);
+    border-bottom:1px solid darken($primary-alt, 5%);
+
+    &:last-child{
+        border-bottom:none;
+    }
+}
+.submenu__link{
+    background:$primary-alt;
+
+    &:hover,
+    &:active{
+        background:lighten($primary-alt, 20%);
+    }
+}
+
+.submenu__link--current{
+    background:lighten($primary-alt, 20%);
+    cursor:default;
+}
+
+
+/* responsive menu styles */
+.slicknav_menu {
+	display:none;
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+	.js .js-menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+}
+
+/*Footer menu*/
+.menu--bottom{
+    display:none;
+    @include media($tablet){
+        display:table;
+    }
+
+    .menu__item{
+        border:none;
+    }
+    .menu__link{
+        &:hover,
+        &:active,
+        &.menu__link--current{
+            background:$primary;
+            text-decoration:underline;
+        }
+    }
+}

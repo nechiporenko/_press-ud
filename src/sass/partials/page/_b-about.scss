@@ -1,0 +1,21 @@
+﻿@import "../../modules/_base.scss";
+/*About (Homepage) Block*/
+.b-about{
+    @include px2rem(margin-bottom, 18px);
+    color:$text-color-dark;
+}
+.b-about__img{
+    @extend .g-max-full-width;
+    @include px2rem(margin-bottom, 18px);
+}
+.b-about__title{
+    display:block;
+    @include px2rem(margin-bottom, 18px);
+    line-height:strip-units($project-line-height/16);
+    font-family:$font-semibold;
+    font-weight:normal;
+    @include font-size(16px);
+    color:$primary;
+    text-transform:uppercase;
+    letter-spacing:0;
+}

@@ -1,0 +1,52 @@
+﻿@import "../../modules/_base.scss";
+
+/*Site Logo*/
+.header__logo{
+    float:left;
+    @include px2rem(width, 60px);
+    @include px2rem(height, 60px);
+    @include hide-text;
+    background-image:url(../img/logo.svg);
+    background-repeat:no-repeat;
+    background-size:contain;
+    
+    @include media($mobile){
+        @include px2rem(width, 90px);
+        @include px2rem(height, 90px);
+        @include px2rem(margin-bottom, 9px);
+    }   
+
+    @include media($desktop){
+        @include px2rem(margin,0 0 18px 25px);
+    }
+}
+
+.no-svg .header__logo{
+    background-image:url(../img/logo.png);
+}
+
+.header__caption{
+    float:left;
+    @include px2rem(margin-left, 25px);
+    @include px2rem(padding-top, 12px);
+    line-height:1;
+    color:$primary-alt;
+    @include font-size(11px);
+    font-family:$font-title;
+    font-weight:700;
+    text-decoration:none;
+    display:none;
+    @include media($desktop){
+        display:block;
+    }
+}
+.header__title{
+    display:block;
+    @include px2rem(margin-bottom, 7px);
+    font-family:$font-bold;
+    @include font-size(26px);
+    line-height:1;
+    color:$primary;
+    font-weight:normal;
+    letter-spacing:0;
+}
