@@ -28,3 +28,13 @@
         display:block;
     }
 }
+
+/*Page Alt Banner*/
+.banner-alt{
+    @include px2rem(margin-top, -36px);
+}
+.banner-alt__img{
+    display:block;
+    @extend .g-max-full-width;
+    margin:0 auto;
+}

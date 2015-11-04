@@ -61,6 +61,13 @@ h1, h2, h3, h4, h5, h6, .g-title-h1, .g-title-h2, .g-title-h3, .g-title-h4 {
     @include font-size(18px);
 }
 
+.g-title-alt{
+    @extend .g-title-h1;
+    @include font-size(16px);
+    color:$primary;
+}
+
+
 .g-brand-color{
     color:$primary;
 }
@@ -107,6 +114,42 @@ ol ul {
     list-style-type:none;
     margin:0;
     padding:0;
+}
+
+.g-styled-list{
+    list-style-type:none;
+    padding:0;
+    @include px2rem(margin-bottom, 36px);
+}
+.g-styled-list__item{
+    display:block;
+    @include px2rem(margin-bottom, 18px);
+    @include px2rem(padding-left, 30px);
+    position:relative;
+
+    &:before{
+        content:'\e802';
+        font-family:'fontello';
+        @include font-size(14px);
+        color:$primary;
+        position:absolute;
+        @include px2rem(left, 4px);
+        @include px2rem(top, 1px);
+    }
+
+    &:after{
+        content:'';
+        display:block;
+        @include px2rem(width, 19px);
+        @include px2rem(height, 19px);
+        box-sizing:border-box;
+        border:1px solid $primary-alt;
+        border-radius:50%;
+        position:absolute;
+        left:0; top:0;
+    }
+
+    
 }
 
 /* Blockquote */
