@@ -1,0 +1,60 @@
+﻿@import "../../modules/_base.scss";
+/*Image gallery*/
+.gallery{
+    list-style-type:none;
+    @include px2rem(padding, 0 0 18px 0);
+    margin:0;
+    background:#fff;
+    @extend .g-clearfix;
+}
+.gallery__item{
+    float:left;
+    @include px2rem(margin-bottom, 18px);
+    box-sizing:border-box;
+    width:(100%-$grid-gutter)/2;
+    margin-left:$grid-gutter;
+
+    
+
+    &:nth-child(2n+1){
+        margin-left:0;
+    }
+
+    @include media($mobile){
+        width:(100%-$grid-gutter*2)/3;
+
+        &:nth-child(2n+1){
+            margin-left:$grid-gutter;
+        }
+
+        &:nth-child(3n+1){
+            margin-left:0;
+        }
+    }
+
+    @include media($tablet){
+        width:(100% - $grid-gutter*3)/4;
+        
+        &:nth-child(3n+1){
+            margin-left:$grid-gutter;
+        }
+
+        &:nth-child(4n+1){
+            margin-left:0;
+        }
+
+        &.last{
+            margin-left:0; //ie8
+        }
+    }
+}
+.gallery__link{
+    display:block;
+    padding-top:100%;
+    position:relative;
+}
+.gallery__img{
+    @extend .g-img-centered;
+    max-width:100%;
+    max-height:100%;
+}

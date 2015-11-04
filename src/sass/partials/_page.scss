@@ -4,8 +4,11 @@
 @import "page/_scroll-up.scss";
 @import "page/_basics.scss";
 @import "page/_b-about.scss";
+@import "page/_banner.scss";
+@import "page/_gallery.scss";
 
 
+/*Page Grid*/
 .page{
     @extend .g-container;
 }
@@ -15,9 +18,14 @@
 .page__main,
 .page__side{
     @extend .g-col;
+}
+.page__main,
+.page__side,
+.page__full{
     @include px2rem(padding, 0 20px 18px);
     background:#fff;
     @include font-size(14px);
+    @include px2rem(min-height, 252px);
 }
 
 .page__main{
@@ -30,6 +38,11 @@
         width:(42.5% - $grid-gutter);
     }
 }
+.page__full{
+    color:$text-color-dark;
+}
+
+/*Page Title*/
 .page__title{
     display:block;
     @include px2rem(margin,0 -20px 18px);

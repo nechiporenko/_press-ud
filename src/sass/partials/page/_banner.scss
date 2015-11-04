@@ -1,0 +1,30 @@
+﻿@import "../../modules/_base.scss";
+/*Page Image Banner*/
+.banner{
+    position:relative;
+}
+.banner__img{
+    @extend .g-full-width;
+}
+.banner__caption{
+    @include px2rem(padding, 9px 20px);
+    background:$primary;
+    background:rgba($primary, .75);
+    color:#fff;
+    position:absolute;
+    left:0; bottom:0;
+    width:100%;
+    box-sizing:border-box;
+    display:none;
+    @include media($mobile){
+        display:block;
+    }
+}
+.banner__title{
+    font-family:$font-semibold;
+    text-transform:uppercase;
+    display:none;
+    @include media($tablet){
+        display:block;
+    }
+}
