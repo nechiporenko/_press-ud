@@ -67,6 +67,7 @@
     position:relative;
     border:1px solid #f7f7f7;
     overflow:hidden;
+    text-decoration:none;
     &:hover,
     &:active{
         border-color:$primary;

@@ -1626,7 +1626,8 @@ img.g-full-width, img.g-table, img.banner__img {
   padding-top: 99%;
   position: relative;
   border: 1px solid #f7f7f7;
-  overflow: hidden; }
+  overflow: hidden;
+  text-decoration: none; }
   .gallery__link:hover, .gallery__video:hover, .gallery__link:active, .gallery__video:active {
     border-color: #8cb53d; }
 
@@ -1835,8 +1836,6 @@ img.g-full-width, img.g-table, img.banner__img {
   margin: 5px 5px 6px;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   background-color: #302118; }
 
@@ -1856,8 +1855,6 @@ img.g-full-width, img.g-table, img.banner__img {
     padding: 5px 10px;
     margin: 2px 5px; }
     .slicknav_nav .slicknav_row:hover {
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
       border-radius: 6px;
       background: #96664b;
       color: #fff; }
@@ -1866,9 +1863,9 @@ img.g-full-width, img.g-table, img.banner__img {
     margin: 2px 5px;
     text-decoration: none;
     color: #fff; }
+    .slicknav_nav a.current {
+      text-decoration: underline; }
     .slicknav_nav a:hover {
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
       border-radius: 6px;
       background: #96664b;
       color: #fff; }

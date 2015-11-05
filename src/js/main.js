@@ -33,17 +33,27 @@ jQuery(document).ready(function ($) {
     // Мобильное меню
     //---------------------------------------------------------------------------------------
     var initMobileMenu = (function () {
-        var $hidden = '<div class="g-hidden" id="menu_clone"></div>';
-        $body.append($hidden);
-        $('.js-menu').clone().appendTo($('#menu_clone'));
-        $('#menu_clone').find('ul, li, a').removeAttr('class');
-        $('#menu_clone > ul').slicknav({
+        var $hidden = '<div class="g-hidden" id="menu_clone"></div>';//необходимо запустить мобильное меню, предварительно удалив из него css-классы
+        $body.append($hidden);//добавили временный скрытый блок
+        $('.js-menu').clone().appendTo($('#menu_clone'));//клонировали в него десктоп-меню
+        $('#menu_clone').find('ul, li').removeAttr('class');//убрали в нем классы десктоп-меню
+        $('#menu_clone a').each(function () {//пробежались по линкам
+            var isCurrent = false;
+            if ($(this).hasClass('menu__link--current') || ($(this).hasClass('submenu__link--current'))) {
+                isCurrent = true;//если содержит класс текущей страницы - изменили значение флага
+            }
+            $(this).removeAttr('class');//прибили в них классы десктоп-меню
+            if (isCurrent) {
+                $(this).addClass('current');//передали класс текущей страницы в мобильное меню
+            }
+        });
+        $('#menu_clone > ul').slicknav({//запускаем мобильное меню
             label: '',
-            allowParentLinks: true,
+            allowParentLinks: true,//разрешаем переход по линкам, содержащим под-меню
             openedSymbol: '<i class="icon-down-dir"></i>',
             closedSymbol: '<i class="icon-right-dir"></i>',
             init: function () {
-                $('#menu_clone').remove();
+                $('#menu_clone').remove(); //убиваем временный скрытый блок
             }
         });
     })();
@@ -72,7 +82,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    function closeLangList() {
+    function closeLangList() {//будем закрывать список по клику где-то в документе
         $('.js-switcher').mouseleave(function () {
             $body.bind('click', langList.hideList);
         }).mouseenter(function () {
@@ -119,10 +129,6 @@ jQuery(document).ready(function ($) {
     //---------------------------------------------------------------------------------------
     function initImgGallery() {
         $('.js-gallery a').lightbox({ blur: false });
-
-        if ($('html').hasClass('lt-ie9')) {
-            $('.js-gallery li').filter(':nth-child(4n+1)').addClass('last');
-        }
     }
 
     if ($('.js-gallery').length > 0) {
@@ -142,7 +148,7 @@ jQuery(document).ready(function ($) {
             }
         });
 
-        $('.js-video').on('click', 'a', function (e) {
+        $('.js-video').on('click', 'a', function (e) {//будем открывать видео в модальном окне
             e.preventDefault();
             var link = $(this).attr('href'),
                 id = getYoutubeID(link);
@@ -252,4 +258,8 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    if ($('html').hasClass('lt-ie9')) {
+        $('.js-gallery li').filter(':nth-child(4n+1)').addClass('last');
+        $('.js-video li').filter(':nth-child(4n+1)').addClass('last');
+    }
 });
