@@ -7,6 +7,10 @@
     background:#fff;
     @extend .g-clearfix;
 }
+.gallery--thin{
+    margin-left:0;
+    margin-right:0;
+}
 
 .gallery__item{
     float:left;
@@ -73,6 +77,11 @@
         border-color:$primary;
     }
 }
+
+.gallery__link--long{
+    padding-top:141%;
+}
+
 .gallery__img{
     @extend .g-img-centered;
     max-width:102%;

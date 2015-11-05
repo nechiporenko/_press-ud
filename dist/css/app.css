@@ -1585,6 +1585,10 @@ img.g-full-width, img.g-table, img.banner__img {
   margin: 0 -1.25rem 1.125rem;
   background: #fff; }
 
+.gallery--thin {
+  margin-left: 0;
+  margin-right: 0; }
+
 .gallery__item {
   float: left;
   width: 48.821174201%;
@@ -1630,6 +1634,9 @@ img.g-full-width, img.g-table, img.banner__img {
   text-decoration: none; }
   .gallery__link:hover, .gallery__video:hover, .gallery__link:active, .gallery__video:active {
     border-color: #8cb53d; }
+
+.gallery__link--long {
+  padding-top: 141%; }
 
 .gallery__img {
   max-width: 102%;
