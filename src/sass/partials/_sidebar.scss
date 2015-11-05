@@ -1,19 +1,12 @@
 ﻿@import "../modules/_base.scss";
 /*Sidebar News List*/
-.news-list{
+.s-posts-list{
     list-style-type:none;
     padding:0;
     @include px2rem(margin, -18px -20px 36px);
 }
-.news-list__item{
 
-    &:first-child{
-        .news-list__link{
-            //padding-top:0;
-        }
-    }
-}
-.news-list__link{
+.s-posts-list__link{
     display:block;
     @include px2rem(padding, 18px 20px);
     @extend .g-clearfix;
@@ -26,7 +19,7 @@
         background:#e8e8e8;
     }
 }
-.news-list__img-wrap{
+.s-posts-list__img-wrap{
     @include px2rem(height, 90px);
     position:relative;
 
@@ -35,12 +28,10 @@
         @include px2rem(margin, 0 18px 0 0);
     }
 }
-.news-list__img{
+.s-posts-list__img{
     @extend .g-img-centered;
-    max-width:100%;
-    max-height:100%;
 }
-.news-list__title{
+.s-posts-list__title{
     display:block;
     font-family:$font-title;
     font-weight:700;
