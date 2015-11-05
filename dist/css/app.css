@@ -922,8 +922,8 @@ img.g-full-width, img.g-table, img.banner__img {
   right: 0;
   bottom: 0;
   left: 0;
-  max-width: 98%;
-  max-height: 98%;
+  max-width: 100%;
+  max-height: 100%;
   margin: auto; }
 
 /*Site Logo*/
@@ -1423,7 +1423,7 @@ img.g-full-width, img.g-table, img.banner__img {
     opacity: .9; }
 
 /*Basics Blocks*/
-.basics__item {
+.basics__link {
   height: 234px;
   height: 14.625rem;
   margin-bottom: 18px;
@@ -1435,21 +1435,24 @@ img.g-full-width, img.g-table, img.banner__img {
   position: relative;
   min-height: 0.01%; }
   @media screen and (min-width: 28.125em)  {
-    .basics__item {
+    .basics__link {
       width: 48.821174201%;
       margin-left: 2.3576515979%; }
-      .basics__item:nth-child(2n+1) {
+      .basics__link:nth-child(2n+1) {
         margin-left: 0; } }
   @media screen and (min-width: 46.875em)  {
-    .basics__item {
+    .basics__link {
       width: 23.2317613015%;
       margin-left: 2.3576515979%; }
-      .basics__item:nth-child(2n+1) {
+      .basics__link:nth-child(2n+1) {
         margin-left: 2.3576515979%; }
-      .basics__item:first-child {
+      .basics__link:first-child {
         margin-left: 0; } }
-  .basics__item:hover .basics__title, .basics__item:active .basics__title {
+  .basics__link:hover .basics__title, .basics__link:active .basics__title {
     color: #8cb53d; }
+
+.basics__item {
+  margin: 0; }
 
 .basics__wrap {
   height: 180px;

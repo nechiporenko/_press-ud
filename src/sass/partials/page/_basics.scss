@@ -3,7 +3,7 @@
 .basics{
     @extend .g-clearfix;
 }
-.basics__item{
+.basics__link{
     @include px2rem(height, 234px);
     @include px2rem(margin-bottom, 18px);
     float:left;
@@ -41,6 +41,9 @@
             color:$primary;
         }
     }
+}
+.basics__item{
+    margin:0;
 }
 .basics__wrap{
     @include px2rem(height, 180px);
