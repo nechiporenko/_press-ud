@@ -1170,6 +1170,12 @@ img.g-full-width, img.g-table, img.banner__img {
     .b-contacts__name, .b-contacts__phone {
       display: inline-block; } }
 
+.b-contacts__phone {
+  color: #292929;
+  text-decoration: none; }
+  .b-contacts__phone:hover, .b-contacts__phone:active {
+    text-decoration: underline; }
+
 @media screen and (min-width: 62.5em)  {
   .b-contacts__name {
     min-width: 180px;

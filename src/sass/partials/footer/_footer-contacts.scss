@@ -28,6 +28,14 @@
         display:inline-block;
     }
 }
+.b-contacts__phone{
+    color:$text-color-dark;
+    text-decoration:none;
+    &:hover,
+    &:active{
+        text-decoration:underline;
+    }
+}
 .b-contacts__name{
     @include media($desktop){
         @include px2rem(min-width, 180px);
