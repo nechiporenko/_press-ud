@@ -33,7 +33,7 @@
                                     <a href="#" hreflang="ru" class="lang-swither__link">Рус</a>
                                 </li>
                                 <li class="lang-swither__item">
-                                    <a href="#" hreflang="uk" class="lang-swither__link">Eng</a>
+                                    <a href="#" hreflang="en" class="lang-swither__link">Eng</a>
                                 </li>
                             </ul>
                         </div>
@@ -49,7 +49,7 @@
             <nav class="header__menu">
                 <ul class="menu js-menu">
                     <li class="menu__item">
-                        <a href="index.html" class="menu__link menu__link--current">Главная</a>
+                        <a href="index.html" class="menu__link">Главная</a>
                     </li>
                     <li class="menu__item">
                         <a href="about.html" class="menu__link">О нас</a>
@@ -72,7 +72,7 @@
                         </ul>
                     </li>
                     <li class="menu__item">
-                        <a href="gallery.html" class="menu__link">Галерея</a>
+                        <a href="gallery.html" class="menu__link menu__link--current">Галерея</a>
                         <ul class="submenu">
                             <li class="submenu__item">
                                 <a href="photo.html" class="submenu__link">Фото</a>
@@ -93,133 +93,84 @@
         </div><!--/header__container-->
     </header>
     <div class="page">
-        <div class="basics">
-            <a href="#" class="basics__link">
-                <figure class="basics__item">
-                    <div class="basics__wrap">
-                        <img src="img/img01-thumb.jpg" alt="Product" class="basics__img" />
-                    </div>
-                    <figcaption class="basics__caption">
-                        <p class="basics__title">
-                            Прессы брикетирующие ударно-механические
-                        </p>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="basics__link">
-                <figure class="basics__item">
-                    <div class="basics__wrap">
-                        <img src="img/img02-thumb.jpg" alt="Product" class="basics__img" />
-                    </div>
-                    <figcaption class="basics__caption">
-                        <p class="basics__title">
-                            Сушилки аэродинамического типа
-                        </p>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="basics__link">
-                <figure class="basics__item">
-                    <div class="basics__wrap">
-                        <img src="img/img03-thumb.jpg" alt="Product" class="basics__img" />
-                    </div>
-                    <figcaption class="basics__caption">
-                        <p class="basics__title">
-                            Комплекс для измельчения тюков
-                        </p>
-                    </figcaption>
-                </figure>
-            </a>
-            <a href="#" class="basics__link">
-                <figure class="basics__item">
-                    <div class="basics__wrap">
-                        <img src="img/img01-thumb.jpg" alt="Product" class="basics__img" />
-                    </div>
-                    <figcaption class="basics__caption">
-                        <p class="basics__title">
-                            Грануляторы
-                        </p>
-                    </figcaption>
-                </figure>
-            </a>
-        </div><!--/basics-->
-        <div class="page__row">
-            <main class="page__main">
-                <div class="page__title">
-                    О нас
-                </div>
-                <article class="b-about" data-match-height>
-                    <img src="http://placehold.it/512x378" class="b-about__img" alt="About" />
-                    <h1 class="b-about__title">
-                        Основным видом деятельности с момента создания является металлообработка
-                    </h1>
-                    <p>Начиная с 2007 г. мы сделали акцент на производстве ударно механических прессов, сушильного оборудования, измельчающего оборудования.</p>
-                    <p>Нашим предприятием постоянно ведутся работы в частности совершенствования конструкции, повышения производительности, долговечности оборудования.  Мы также следим за последними достижениями в области технологического оборудования, при этом применяем ...</p>
-                </article>
-                <a href="about.html" class="g-btn">Читать далее »</a>
-            </main>
-            <aside class="page__side">
-                <div class="page__title">Статьи</div>
-                <ul class="news-list" data-match-height>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <figure class="news-list__img-wrap">
-                                <img src="http://placehold.it/100x90" alt="News" />
-                            </figure>
-                            <div class="news-list__caption">
-                                <span class="news-list__title">Почему брикеты?</span>
-                                Еще столетие назад дешевым, самым практичным, эффективным и удобным сырьем для отопления...
-                            </div>
+        <main class="page__full">
+            <h1 class="page__title">Галерея</h1>
+            <nav class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+                <span typeof="v:Breadcrumb">
+                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Главная</a>
+                </span>
+                »
+                <span rel="v:child" typeof="v:Breadcrumb">
+                    <span href="#" rel="v:url" property="v:title">Галерея</span>
+                </span>
+            </nav>
+            <ul class="gallery js-gallery">
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="img/img01.jpg" class="gallery__link" data-caption="ПБУ-060-400">
+                            <img src="img/img01-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <figure class="news-list__img-wrap">
-                                <img src="http://placehold.it/100x90" alt="News" />
-                            </figure>
-                            <div class="news-list__caption">
-                                <span class="news-list__title">Технологии брикетирования</span>
-                                Комплект оборудования для брикетирования соломы зерновых культур. Брикеты из соломы получают...
-                            </div>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="img/img02.jpg" class="gallery__link" data-caption="ПБУ-060-400">
+                            <img src="img/img02-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <figure class="news-list__img-wrap">
-                                <img src="http://placehold.it/100x90" alt="News" />
-                            </figure>
-                            <div class="news-list__caption">
-                                <span class="news-list__title">Почему брикеты?</span>
-                                Еще столетие назад дешевым, самым практичным, эффективным и удобным сырьем для отопления...
-                            </div>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="img/img03.jpg" class="gallery__link" data-caption="Очень длинный заголовок">
+                            <img src="img/img03-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <figure class="news-list__img-wrap">
-                                <img src="http://placehold.it/100x90" alt="News" />
-                            </figure>
-                            <div class="news-list__caption">
-                                <span class="news-list__title">Технологии брикетирования</span>
-                                Комплект оборудования для брикетирования соломы зерновых культур. Брикеты из соломы получают...
-                            </div>
+                        <figcaption class="gallery__title">Очень длинный заголовок очень длинный заголовок длинный заголовок</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="img/img04.jpg" class="gallery__link" data-caption="ПБУ-060-400">
+                            <img src="img/img04-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <figure class="news-list__img-wrap">
-                                <img src="http://placehold.it/100x90" alt="News" />
-                            </figure>
-                            <div class="news-list__caption">
-                                <span class="news-list__title">Почему брикеты?</span>
-                                Еще столетие назад дешевым, самым практичным, эффективным и удобным сырьем для отопления...
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="articles" class="g-btn">Читать больше »</a>
-            </aside>
-        </div><!--/page__row-->
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <p class="g-text-center">
+                <a href="photo.html" class="g-btn">Больше фото »</a>
+            </p>
+            <ul class="gallery js-video">
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="https://youtu.be/zRIbf6JqkNc" class="gallery__video"></a>
+                        <figcaption class="gallery__title">Название видео</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="https://youtu.be/8SbUC-UaAxE" class="gallery__video"></a>
+                        <figcaption class="gallery__title">Очень очень длинное предлинное название длинного видео</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="https://youtu.be/X1ZRBPA8SK0" class="gallery__video"></a>
+                        <figcaption class="gallery__title">Название видео</figcaption>
+                    </figure>
+                </li>
+                <li class="gallery__item">
+                    <figure class="gallery__wrap">
+                        <a href="https://youtu.be/Rbm6GXllBiw" class="gallery__video"></a>
+                        <figcaption class="gallery__title">Название видео</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <div class="g-text-center">
+                <a href="video.html" class="g-btn">Больше видео »</a>
+            </div>
+        </main>
     </div><!--/page-->
     <footer class="footer">
         <div class="footer__top">
@@ -277,7 +228,7 @@
                                 <a href="mailto:press-udarnyi@mail.ru" class="b-contacts__mail">press-udarnyi@mail.ru</a>
                             </li>
                         </ul>
-                        
+
                         <ul class="social">
                             <li class="social__item">
                                 <a href="#" class="social__link"><i class="icon-facebook"></i></a>
@@ -323,7 +274,7 @@
             <nav class="footer__container">
                 <ul class="menu menu--bottom">
                     <li class="menu__item">
-                        <a href="index.html" class="menu__link menu__link--current">Главная</a>
+                        <a href="index.html" class="menu__link">Главная</a>
                     </li>
                     <li class="menu__item">
                         <a href="about.html" class="menu__link">О нас</a>
@@ -335,7 +286,7 @@
                         <a href="info.html" class="menu__link">Информация</a>                        
                     </li>
                     <li class="menu__item">
-                        <a href="gallery.html" class="menu__link">Галерея</a>                       
+                        <a href="gallery.html" class="menu__link menu__link--current">Галерея</a>                       
                     </li>
                     <li class="menu__item">
                         <a href="contacts.html" class="menu__link">Контакты</a>
