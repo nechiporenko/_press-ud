@@ -33,7 +33,7 @@
                                     <a href="#" hreflang="ru" class="lang-swither__link">Рус</a>
                                 </li>
                                 <li class="lang-swither__item">
-                                    <a href="#" hreflang="uk" class="lang-swither__link">Eng</a>
+                                    <a href="#" hreflang="en" class="lang-swither__link">Eng</a>
                                 </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@
                         <a href="index.html" class="menu__link">Главная</a>
                     </li>
                     <li class="menu__item">
-                        <a href="about.html" class="menu__link menu__link--current">О нас</a>
+                        <a href="about.html" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
                         <a href="production.html" class="menu__link">Продукция</a>
@@ -72,10 +72,10 @@
                         </ul>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Галерея</a>
+                        <a href="#" class="menu__link menu__link--current">Галерея</a>
                         <ul class="submenu">
                             <li class="submenu__item">
-                                <a href="photo.html" class="submenu__link">Фото</a>
+                                <a href="photo.html" class="submenu__link submenu__link--current">Фото</a>
                             </li>
                             <li class="submenu__item">
                                 <a href="video.html" class="submenu__link">Видео</a>
@@ -93,37 +93,28 @@
         </div><!--/header__container-->
     </header>
     <div class="page">
-        <article class="page__full">
-            <h1 class="page__title">О нас</h1>
+        <main class="page__full">
+            <h1 class="page__title">Галерея</h1>
             <nav class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
                 <span typeof="v:Breadcrumb">
                     <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Главная</a>
                 </span>
                 »
+                <span typeof="v:Breadcrumb">
+                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Галерея</a>
+                </span>
+                »
                 <span rel="v:child" typeof="v:Breadcrumb">
-                    <span href="#" rel="v:url" property="v:title">О нас</span>
+                    <span href="#" rel="v:url" property="v:title">Фото</span>
                 </span>
             </nav>
-            <figure class="banner">
-                <img src="http://placehold.it/920x288" class="banner__img" alt="Page Image" />
-                <figcaption class="banner__caption">
-                    <span class="banner__title">
-                        Основным видом деятельности с момента создания являлась металлообработка
-                    </span>
-                    История нашего предприятия берет свое начало с 2002г.
-                </figcaption>
-            </figure>
-            <p>&emsp;История нашего предприятия берёт свое начало с 2002 г. Основным видом деятельности с момента создания являлась металлообработка. Начиная с 2007 г. мы сделали акцент на производстве ударно механических прессов, сушильного оборудования, измельчающего оборудования. Наша миссия  –  обеспечить переработку отходов деревообрабатывающих предприятий, предприятий которые перерабатывают семечку подсолнуха, гречку, рис, отходы элеватора а также отходы мебельных фабрик (МДФ, ДВП), для получения ликвидной высоко рентабельной продукции из отходов. Наша задача  –  выпуск конкурентного, надежного в эксплуатации, легкого в процессе обслуживания, доступного по цене оборудования.</p>
-            <p>&emsp;Нашим предприятием постоянно ведутся работы в частности совершенствования конструкции, повышения производительности, долговечности оборудования.</p>
-            <p>&emsp;Мы также следим за последними достижениями в области технологического оборудования, при этом применяем только проверенные и надежные нововведения, а главное  –  простые технические решения. Обращаясь к нашим специалистам, Вы получаете полный комплекс услуг, включая консультации по технологии производства, планирование и разработке производственной линии, гарантийное и послегарантийное обслуживание, техническое обслуживание.</p>
-            <p>&emsp;На сегодняшний день мы имеем собственные производственные помещения, общей площадью 2 300 м/кв. Более 40 наименований собственного металлообрабатывающего оборудования, что дает нам возможность самостоятельно изготавливать наше оборудование.</p>
-            
             <ul class="gallery js-gallery">
                 <li class="gallery__item">
                     <figure class="gallery__wrap">
                         <a href="img/img01.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img01-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -131,6 +122,7 @@
                         <a href="img/img02.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img02-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -138,6 +130,7 @@
                         <a href="img/img03.jpg" class="gallery__link" data-caption="Очень длинный заголовок">
                             <img src="img/img03-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">Очень длинный заголовок очень длинный заголовок длинный заголовок</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -145,6 +138,7 @@
                         <a href="img/img04.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img04-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -152,6 +146,7 @@
                         <a href="img/img01.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img01-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -159,6 +154,7 @@
                         <a href="img/img02.jpg" class="gallery__link" data-caption="Очень длинный заголовок">
                             <img src="img/img02-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">Очень длинный заголовок очень длинный заголовок длинный заголовок</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -166,6 +162,7 @@
                         <a href="img/img03.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img03-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
                 <li class="gallery__item">
@@ -173,10 +170,14 @@
                         <a href="img/img04.jpg" class="gallery__link" data-caption="ПБУ-060-400">
                             <img src="img/img04-thumb.jpg" class="gallery__img" alt="Product" />
                         </a>
+                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
                     </figure>
                 </li>
             </ul>
-        </article>
+            <div class="g-text-center">
+                <a href="video.html" class="g-btn">Видео</a>
+            </div>
+        </main>
     </div><!--/page-->
     <footer class="footer">
         <div class="footer__top">
@@ -283,7 +284,7 @@
                         <a href="index.html" class="menu__link">Главная</a>
                     </li>
                     <li class="menu__item">
-                        <a href="about.html" class="menu__link menu__link--current">О нас</a>
+                        <a href="about.html" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
                         <a href="production.html" class="menu__link">Продукция</a>
@@ -292,7 +293,7 @@
                         <a href="info.html" class="menu__link">Информация</a>                        
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Галерея</a>                       
+                        <a href="#" class="menu__link menu__link--current">Галерея</a>                       
                     </li>
                     <li class="menu__item">
                         <a href="contacts.html" class="menu__link">Контакты</a>
