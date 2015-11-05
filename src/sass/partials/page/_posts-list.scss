@@ -1,0 +1,78 @@
+﻿@import "../../modules/_base.scss";
+/*Post (or Articles) List*/
+.posts-list{
+    list-style-type:none;
+    padding:0;
+    @include px2rem(margin, 0 -20px 18px);
+}
+.posts-list__item{
+    display:block;
+    @extend .g-clearfix;
+    @include px2rem(margin-bottom, 18px);
+}
+.posts-list__img{
+    @extend .g-max-full-width;
+}
+.posts-list__thumb,
+.posts-list__caption{
+    float:left;
+    width:100%;
+    min-height:0.01%;
+}
+.posts-list__thumb{
+    @include px2rem(max-width, 410px);
+    margin:0;
+    @include media($tablet){
+        width:42.7%;
+    }
+}
+.posts-list__caption{
+    @include media($tablet){
+        width:57.3%;
+    }
+}
+.posts-list__header{
+    @include px2rem(padding, 9px 20px);
+    @include px2rem(max-width, 410px);
+    background:$primary;
+    color:#fff;
+    line-height:strip-units($project-line-height/16);
+    @include px2rem(letter-spacing, 1.5px);
+    font-family:$font-title;
+    font-weight:700;
+    @include font-size(16px);
+    box-sizing:border-box;
+
+    @include media($tablet){
+        max-width:100%;
+    }
+}
+.posts-list__title{
+    @include font-size(16px);
+    text-transform:none;
+    margin:0;
+}
+.posts-list__date{
+    display:block;
+    @include px2rem(margin-bottom, 9px);
+    color:#9d9d9d;
+    font-family:$font-italic;
+    line-height:1.8;
+}
+.posts-list__link{
+    display:block;
+    text-align:right;
+    font-family:$font-italic;
+    color:$primary-alt;
+    text-decoration:none;
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
+
+.posts-list__date,
+.posts-list__quote,
+.posts-list__link{
+    @include px2rem(padding, 0 20px);
+}
