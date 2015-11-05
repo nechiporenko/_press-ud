@@ -6,6 +6,7 @@
 // Сообщения об отправке формы
 // Кнопка скролла страницы
 // Галерея изображений
+// Галерея видео
 // Модальное окно
 // Если браузер не знает о svg-картинках
 
@@ -129,6 +130,51 @@ jQuery(document).ready(function ($) {
     }
 
     //
+    // Галерея видео
+    //---------------------------------------------------------------------------------------
+    function initVideoGallery() {
+        $('.js-video a').each(function () {//для каждого блока подгрузим превью видео
+            var link = $(this).attr('href'),
+                id = getYoutubeID(link);
+            console.log(getYoutubeThumb(id));
+            if (id) {
+                $(this).css('background-image', 'url(' + getYoutubeThumb(id) + ')');
+            }
+        });
+
+        $('.js-video').on('click', 'a', function (e) {
+            e.preventDefault();
+            var link = $(this).attr('href'),
+                id = getYoutubeID(link);
+            if (id) {
+                $('#modal').find('iframe').attr('src', 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0');
+                showModal.open('#modal');
+            }
+        });
+
+        function getYoutubeID(url) {//парсим youtube-ссылку, возвращаем id видео
+            var regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+            var match = url.match(regExp),
+                urllink;
+            if (match && match[1].length == 11) {
+                urllink = match[1];
+            } else {
+                urllink = false;
+            }
+            return urllink;
+        }
+
+        function getYoutubeThumb(id) {//по id видео находим картинку
+            var imagelink = "http:\/\/img.youtube.com\/vi\/" + id + "\/hqdefault.jpg";
+            return imagelink;
+        }
+    }
+
+    if ($('.js-video').length > 0) {
+        initVideoGallery();
+    }
+
+    //
     // Модальное окно
     //---------------------------------------------------------------------------------------
     var showModal = (function (link) {
@@ -179,6 +225,7 @@ jQuery(document).ready(function ($) {
 
         // закрываем
         method.close = function () {
+            $modal.find('iframe').attr('src', '');//если в ьодальном окне было видео - убъем
             $modal.fadeOut('fast');
             $overlay.fadeOut('fast', function () {
                 $overlay.unbind('click').remove(); //убиваем оверлей

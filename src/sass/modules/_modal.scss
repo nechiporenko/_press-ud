@@ -34,6 +34,18 @@
     border-radius:10px;
     @include px2rem(padding, 8px);
     z-index:3100;
+
+    @include media(550px){
+        @include px2rem(width, 500px);
+    }
+
+    @include media($tablet){
+        @include px2rem(width, 600px);
+    }
+
+    @include media($desktop){
+        @include px2rem(width, 700px);
+    }
 }
 
 .modal__content{
@@ -41,19 +53,21 @@
     background:#fff;
     @include px2rem(padding, 20px 10px);
     margin:0;
+
+    @include media($tablet){
+        @include px2rem(padding,  25px);
+    }
 }
 .modal__close{
+    @include font-size(20px);
     position:absolute;
-    top:10px;
-    right:10px;
+    top:4px;
+    right:4px;
     text-decoration:none;
+
+    @include media($tablet){
+        top:8px;
+        right:8px;
+    }
 }
 
-@media(min-width:550px){
-    .modal{
-        @include px2rem(width, 500px);
-    }
-    .modal__content{
-        @include px2rem(padding, $project-line-height 20px);
-    }
-}

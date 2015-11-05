@@ -16,6 +16,7 @@
 <glyph glyph-name="left-open-big" unicode="&#xe807;" d="m452-20q26-26 0-48-26-26-48 0l-392 394q-24 24 0 50l392 394q22 26 48 0 26-22 0-48l-358-372z" horiz-adv-x="465" />
 <glyph glyph-name="down-open-big" unicode="&#xe808;" d="m63 570l370-356 372 356q22 26 48 0 26-22 0-48l-396-392q-22-22-48 0l-396 392q-26 26 0 48 24 24 50 0z" horiz-adv-x="866" />
 <glyph glyph-name="up-open-big" unicode="&#xe809;" d="m804 130l-372 358-370-358q-26-22-50 0-24 24 0 50l396 390q26 26 48 0l396-390q24-26 0-50-26-22-48 0z" horiz-adv-x="864" />
+<glyph glyph-name="play-circled2" unicode="&#xe80a;" d="m0 350q0 207 147 354t353 146 354-146 146-354-146-354-354-146-353 146-147 354z m115 0q0-158 114-271t271-114 271 114 114 271-114 272-271 113-271-113-114-272z m260-250l0 500 375-250z" horiz-adv-x="1000" />
 <glyph glyph-name="menu" unicode="&#xe80e;" d="m650 400q22 0 36-15t14-35-15-35-35-15l-600 0q-20 0-35 15t-15 35 14 35 36 15l600 0z m-600 100q-20 0-35 15t-15 35 14 35 36 15l600 0q22 0 36-15t14-35-15-35-35-15l-600 0z m600-300q22 0 36-15t14-35-15-35-35-15l-600 0q-20 0-35 15t-15 35 14 35 36 15l600 0z" horiz-adv-x="700" />
 <glyph glyph-name="down-dir" unicode="&#xe80f;" d="m460 550l-230-400-230 400 460 0z" horiz-adv-x="460" />
 <glyph glyph-name="left-dir" unicode="&#xe810;" d="m400 580l0-460-400 230z" horiz-adv-x="400" />
