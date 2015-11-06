@@ -92,22 +92,24 @@
             </nav>
         </div><!--/header__container-->
     </header>
-    <div class="page">
+    <main class="page">
         <article class="page__full">
             <h1 class="page__title">Гарантии</h1>
-            <nav class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-                <span typeof="v:Breadcrumb">
-                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Главная</a>
-                </span>
-                »
-                <span typeof="v:Breadcrumb">
-                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Информация</a>
-                </span>
-                »
-                <span rel="v:child" typeof="v:Breadcrumb">
-                    <span href="#" rel="v:url" property="v:title">Гарантии</span>
-                </span>
-            </nav>
+            <ol class="breadcrumbs">
+                <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                        <span class="breadcrumbs__title" itemprop="title">Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="info.html" class="breadcrumbs__link" itemprop="url">
+                        <span class="breadcrumbs__title" itemprop="title">Информация</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span>Гарантии</span>
+                </li>
+            </ol>
             <figure class="banner-alt">
                 <img src="img/guarantees.png" class="banner-alt__img" alt="Guarantees" />
             </figure>
@@ -124,7 +126,7 @@
                 <li class="g-styled-list__item">Срок изготовления оборудования, в зависимости от Вашего выбора, составляет от 3 до 4  месяцев с момента предоплаты.</li>
             </ul>
         </article>
-    </div><!--/page-->
+    </main><!--/page-->
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__container">

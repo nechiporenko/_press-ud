@@ -4,20 +4,24 @@
 //base styles + bourbon
 // see modules/_base.scss
 @import "modules/main";
-//other parts
+
+//grid & utilities
 @import "modules/grid";
+@import "modules/utilities";
+
+
+//page parts
+@import "partials/header";
+@import "partials/menu";
+@import "partials/page";
+@import "partials/sidebar";
+@import "partials/footer";
+
+//other parts
 @import "modules/button";
 @import "modules/forms";
 @import "modules/tables";
 @import "modules/modal";
-@import "modules/utilities";
-
-
-@import "partials/header";
-@import "partials/footer";
-@import "partials/menu";
-@import "partials/page";
-@import "partials/sidebar";
 
 //plugins vendors
 @import "vendor/vendor";

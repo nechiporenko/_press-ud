@@ -13,6 +13,7 @@
 .posts-list__img{
     @extend .g-max-full-width;
 }
+
 .posts-list__thumb,
 .posts-list__caption{
     float:left;
@@ -68,6 +69,7 @@
     &:hover,
     &:active{
         color:$primary;
+        text-decoration:underline;
     }
 }
 

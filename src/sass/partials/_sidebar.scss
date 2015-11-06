@@ -19,17 +19,17 @@
         background:#e8e8e8;
     }
 }
-.s-posts-list__img-wrap{
-    @include px2rem(height, 90px);
-    position:relative;
 
-    @include media($mobile){
+.s-posts-list__img{
+    display:block;
+    @include px2rem(width, 100px);
+    @include px2rem(height, 90px);
+    @include px2rem(margin-bottom, 18px);
+
+    @include media($tablet){
         float:left;
         @include px2rem(margin, 0 18px 0 0);
     }
-}
-.s-posts-list__img{
-    @extend .g-img-centered;
 }
 .s-posts-list__title{
     display:block;

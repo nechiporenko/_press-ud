@@ -46,7 +46,6 @@
 
 /*Page Title*/
 .page__title{
-    display:block;
     @include px2rem(margin,0 -20px 18px);
     @include px2rem(padding, 17px 20px);
     font-family:$font-title;

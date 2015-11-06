@@ -92,22 +92,24 @@
             </nav>
         </div><!--/header__container-->
     </header>
-    <div class="page">
-        <article class="page__full">
+    <main class="page">
+        <section class="page__full">
             <h1 class="page__title">Награды</h1>
-            <nav class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-                <span typeof="v:Breadcrumb">
-                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Главная</a>
-                </span>
-                »
-                <span typeof="v:Breadcrumb">
-                    <a href="#" rel="v:url" property="v:title" class="breadcrumbs__link">Информация</a>
-                </span>
-                »
-                <span rel="v:child" typeof="v:Breadcrumb">
-                    <span href="#" rel="v:url" property="v:title">Награды</span>
-                </span>
-            </nav>
+            <ol class="breadcrumbs">
+                <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="index.html" class="breadcrumbs__link" itemprop="url">
+                        <span class="breadcrumbs__title" itemprop="title">Главная</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a href="info.html" class="breadcrumbs__link" itemprop="url">
+                        <span class="breadcrumbs__title" itemprop="title">Информация</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span>Награды</span>
+                </li>
+            </ol>
             <p>История нашего предприятия берёт свое начало с 2002 г. Основным видом деятельности с момента создания являлась металлообработка. Начиная с 2007 г. мы сделали акцент на производстве ударно механических прессов, сушильного оборудования, измельчающего оборудования.</p>
 
             <ul class="gallery gallery--thin js-gallery">
@@ -176,8 +178,8 @@
                     </figure>
                 </li>
             </ul>
-        </article>
-    </div><!--/page-->
+        </section>
+    </main><!--/page-->
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__container">
