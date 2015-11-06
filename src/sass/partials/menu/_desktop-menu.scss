@@ -26,6 +26,10 @@
     &:last-child{
         border-right:none;
     }
+
+    &:hover{
+        border-color:$primary;
+    }
 }
 
 .menu__link,
@@ -81,6 +85,9 @@
 
     &:last-child{
         border-bottom:none;
+    }
+    &:hover{
+        border-color:lighten($primary-alt, 20%);
     }
 }
 .submenu__link{

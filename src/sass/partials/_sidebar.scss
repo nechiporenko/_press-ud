@@ -38,4 +38,6 @@
     line-height:strip-units($project-line-height/$project-font-size);
     margin:0;
     color:$primary;
+    text-transform:none;
+    letter-spacing:0;
 }

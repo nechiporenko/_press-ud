@@ -24,7 +24,8 @@
 }
 .page__main,
 .page__side,
-.page__full{
+.page__full,
+.page__inner{
     @include px2rem(padding, 0 20px 18px);
     background:#fff;
     @include font-size(14px);
@@ -36,12 +37,27 @@
         width:57.5%;
     }
 }
+.page__main--right{
+    padding-left:0;
+    padding-right:0;
+    @include media($tablet){
+        width:100 - (100% - $grid-gutter*3)/4 -$grid-gutter;
+    }
+}
 .page__side{
     @include media($tablet){
         width:(42.5% - $grid-gutter);
     }
 }
-.page__full{
+.page__side--left{
+    padding-left:0;
+    padding-right:0;
+    @include media($tablet){
+        width:(100% - $grid-gutter*3)/4;
+    }
+}
+.page__full,
+.page__inner{
     color:$text-color-dark;
 }
 

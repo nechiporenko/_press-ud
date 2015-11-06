@@ -1,0 +1,91 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar Menu*/
+.side-menu{
+    @extend .g-clear-list;
+    @include media($tablet){
+        @include px2rem(margin-left, -20px);
+    }
+}
+.side-menu__item{
+    display:block;
+    border-top:1px solid darken($primary, 3%);
+    border-bottom:1px solid lighten($primary, 3%);
+    overflow:hidden;
+
+    &:hover{
+        border-top-color:darken($primary, 10%);
+        border-bottom-color:darken($primary, 10%);
+    }
+
+    &:first-child{
+        border-top:none;
+    }
+    &:last-child{
+        border-bottom:none;
+    }
+}
+.side-menu__link{
+    display:table;
+    width:101%;
+    @include px2rem(height, 54px);
+    @include px2rem(padding, 9px 20px);
+    box-sizing:border-box;
+    background:$primary;
+    color:#fff;
+    line-height:1.1;
+    text-decoration:none;
+    position:relative;
+    
+
+    &:hover,
+    &:active{
+        background:darken($primary, 10%);
+    }
+}
+.side-menu__title{
+    display:table-cell;
+    vertical-align:middle;
+
+    &:after{
+        content:'»';
+        position:absolute;
+        top:50%;
+        @include px2rem(right, 8px);
+        @include px2rem(margin-top, -7px);
+    }
+}
+
+/*Side submenu*/
+.side-submenu{
+    @extend .g-clear-list;
+    @include px2rem(padding, 5px 0);
+    background:#f7f7f7;
+    display:none;
+}
+.side-submenu--current{
+    display:block;
+}
+.side-submenu__item{
+    @include px2rem(padding-left, 30px);
+    position:relative;
+
+    &:before{
+        content:'\e816';
+        font-family:'fontello';
+        position:absolute;
+        @include px2rem(left, 20px);
+        @include px2rem(top, 5px);
+        color:$primary;
+    }
+}
+.side-submenu__link{
+    display:block;
+    @include px2rem(padding, 5px);
+    color:$text-color-dark;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        text-decoration:underline;
+    }
+}

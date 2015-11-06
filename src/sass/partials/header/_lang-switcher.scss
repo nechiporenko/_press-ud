@@ -37,8 +37,13 @@
     display:block;
     border-top:1px solid lighten($primary-alt, 5%);
     border-bottom:1px solid darken($primary-alt, 5%);
+
     &:last-child{
         border-bottom:none;
+    }
+
+    &:hover{
+        border-color:lighten($primary-alt, 20%);
     }
 }
 .lang-swither__link{

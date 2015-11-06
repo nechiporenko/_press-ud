@@ -55,7 +55,7 @@
                         <a href="about.html" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
-                        <a href="production.html" class="menu__link">Продукция</a>
+                        <a href="production.html" class="menu__link menu__link--current">Продукция</a>
                     </li>
                     <li class="menu__item">
                         <a href="info.html" class="menu__link">Информация</a>
@@ -72,7 +72,7 @@
                         </ul>
                     </li>
                     <li class="menu__item">
-                        <a href="gallery.html" class="menu__link menu__link--current">Галерея</a>
+                        <a href="gallery.html" class="menu__link">Галерея</a>
                         <ul class="submenu">
                             <li class="submenu__item">
                                 <a href="photo.html" class="submenu__link">Фото</a>
@@ -92,9 +92,9 @@
             </nav>
         </div><!--/header__container-->
     </header>
-    <main class="page">
-        <section class="page__full">
-            <h1 class="page__title">Галерея</h1>
+    <div class="page">
+        <section class="page__inner">
+            <h1 class="page__title">Продукция</h1>
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                     <a href="index.html" class="breadcrumbs__link" itemprop="url">
@@ -102,84 +102,103 @@
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <span>Галерея</span>
+                    <span>Продукция</span>
                 </li>
             </ol>
-            <ul class="gallery js-gallery">
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="img/img01.jpg" class="gallery__link" data-caption="ПБУ-060-400">
-                            <img src="img/img01-thumb.jpg" class="gallery__img" alt="Product" />
-                        </a>
-                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="img/img02.jpg" class="gallery__link" data-caption="ПБУ-060-400">
-                            <img src="img/img02-thumb.jpg" class="gallery__img" alt="Product" />
-                        </a>
-                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="img/img03.jpg" class="gallery__link" data-caption="Очень длинный заголовок">
-                            <img src="img/img03-thumb.jpg" class="gallery__img" alt="Product" />
-                        </a>
-                        <figcaption class="gallery__title">Очень длинный заголовок очень длинный заголовок длинный заголовок</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="img/img04.jpg" class="gallery__link" data-caption="ПБУ-060-400">
-                            <img src="img/img04-thumb.jpg" class="gallery__img" alt="Product" />
-                        </a>
-                        <figcaption class="gallery__title">ПБУ-060-400</figcaption>
-                    </figure>
-                </li>
-            </ul>
-            <p class="g-text-center">
-                <a href="photo.html" class="g-btn">Больше фото »</a>
-            </p>
-            <ul class="gallery js-video">
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="https://youtu.be/zRIbf6JqkNc" class="gallery__video"></a>
-                        <figcaption class="gallery__title">Название видео</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="https://youtu.be/8SbUC-UaAxE" class="gallery__video"></a>
-                        <figcaption class="gallery__title">Очень очень длинное предлинное название длинного видео</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="https://youtu.be/X1ZRBPA8SK0" class="gallery__video"></a>
-                        <figcaption class="gallery__title">Название видео</figcaption>
-                    </figure>
-                </li>
-                <li class="gallery__item">
-                    <figure class="gallery__wrap">
-                        <a href="https://youtu.be/Rbm6GXllBiw" class="gallery__video"></a>
-                        <figcaption class="gallery__title">Название видео</figcaption>
-                    </figure>
-                </li>
-            </ul>
-            <div class="modal" id="modal">
-                <div class="modal__content">
-                    <div class="g-video-wrap">
-                        <iframe width="560" height="315" src="#" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div><!--/#modal-->
-            <div class="g-text-center">
-                <a href="video.html" class="g-btn">Больше видео »</a>
-            </div>
+            <div class="page__row">
+                <aside class="page__side page__side--left">
+                    <ul class="side-menu">
+                        <li class="side-menu__item">
+                            <a href="#" class="side-menu__link">
+                                <span class="side-menu__title">Прессы брикетирующие ударно-механические</span>
+                            </a>
+                            <ul class="side-submenu">
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-menu__item">
+                            <a href="#" class="side-menu__link">
+                                <span class="side-menu__title">Сушилки аэродинамического типа</span>
+                            </a>
+                            <ul class="side-submenu">
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-menu__item">
+                            <a href="#" class="side-menu__link">
+                                <span class="side-menu__title">Комплекс для измельчения тюков</span>
+                            </a>
+                            <ul class="side-submenu">
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="side-menu__item">
+                            <a href="#" class="side-menu__link">
+                                <span class="side-menu__title">Грануляторы</span>
+                            </a>
+                            <ul class="side-submenu">
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                                <li class="side-submenu__item">
+                                    <a href="#" class="side-submenu__link">ПБУ-060-400</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+                <main class="page__main page__main--right">
+                    <article>
+                        <h2 class="g-title-h2">Прессы брикетирующие ударно-механические</h2>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <a href="#" class="g-btn">Перейти »</a>
+                    </article>
+                    <article>
+                        <h2 class="g-title-h2">Сушилки аэродинамического типа</h2>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <a href="#" class="g-btn">Перейти »</a>
+                    </article>
+                    <article>
+                        <h2 class="g-title-h2">Комплекс для измельчения тюков</h2>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <a href="#" class="g-btn">Перейти »</a>
+                    </article>
+                    <article>
+                        <h2 class="g-title-h2">Грануляторы</h2>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <a href="#" class="g-btn">Перейти »</a>
+                    </article>
+                </main>
+            </div><!--/page__row-->
         </section>
-    </main><!--/page-->
+    </div><!--/page-->
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__container">
@@ -288,13 +307,13 @@
                         <a href="about.html" class="menu__link">О нас</a>
                     </li>
                     <li class="menu__item">
-                        <a href="production.html" class="menu__link">Продукция</a>
+                        <a href="production.html" class="menu__link menu__link--current">Продукция</a>
                     </li>
                     <li class="menu__item">
                         <a href="info.html" class="menu__link">Информация</a>                        
                     </li>
                     <li class="menu__item">
-                        <a href="gallery.html" class="menu__link menu__link--current">Галерея</a>                       
+                        <a href="gallery.html" class="menu__link">Галерея</a>                       
                     </li>
                     <li class="menu__item">
                         <a href="contacts.html" class="menu__link">Контакты</a>

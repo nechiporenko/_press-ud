@@ -2,7 +2,7 @@
 /*Contact Page*/
 .partnership{
     @include media($desktop){
-        @include px2rem(max-width, 380px);
+        @include px2rem(max-width, 385px);
     }
 }
 .partnership,
@@ -29,7 +29,7 @@
     box-sizing:border-box;
 
     @include media($desktop){
-        @include px2rem(width, 380px);
+        @include px2rem(width, 385px);
         float:right;
     }
 }
