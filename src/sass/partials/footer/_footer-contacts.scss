@@ -24,7 +24,7 @@
     display:block;
     white-space:nowrap;
 
-    @include media($tablet){
+    @include media($mobile){
         display:inline-block;
     }
 }

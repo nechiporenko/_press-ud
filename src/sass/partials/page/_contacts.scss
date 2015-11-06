@@ -1,0 +1,71 @@
+﻿@import "../../modules/_base.scss";
+/*Contact Page*/
+.partnership{
+    @include media($desktop){
+        @include px2rem(max-width, 380px);
+    }
+}
+.partnership,
+.partnership__inner{
+    @include px2rem(margin-bottom, 18px);
+}
+.partnership__inner{
+    .g-textarea{
+        display:block;
+        margin-bottom:0;
+    }
+}
+.partnership__btn{
+    @extend .b-form__btn;
+}
+
+/*Contacts info*/
+.contact-info{
+    display:table;
+    table-layout:fixed;
+    @include px2rem(padding, 18px);
+    width:100%;
+    background:#f7f7f7;
+    box-sizing:border-box;
+
+    @include media($desktop){
+        @include px2rem(width, 380px);
+        float:right;
+    }
+}
+.contact-info__inner{
+    @extend .g-as-cell;
+}
+.contact-info__items{
+    font-family:$font-italic;
+}
+.contact-info__link{
+    color:$text-color-dark;
+    text-decoration:none;
+    &:hover,
+    &:active{
+        color:$primary;
+        text-decoration:underline;
+    }
+}
+.contact-info__name{
+    text-decoration:none;
+}
+.contact-info__title{
+    @extend .g-title-h1;
+    @include px2rem(margin-bottom, 9px);
+    color:$primary;
+}
+
+/*Google Map*/
+.map{
+    @include px2rem(height, 360px);
+    background:#e8e8e8;
+    @include media($desktop){
+        @include px2rem(height, 414px);
+    }
+}
+.map__noscrollbar {
+    overflow: hidden;
+    white-space: nowrap;
+}
