@@ -700,11 +700,21 @@ img.g-full-width, img.banner__img, img.g-table {
   height: auto;
   margin: 0 0 0 0; }
 
+img.g-img-left {
+  float: left;
+  margin: 0 20px 9px 0;
+  margin: 0 1.25rem 0.5625rem 0; }
+
+img.g-img-right {
+  float: right;
+  margin: 0 0 20px 9px;
+  margin: 0 0 1.25rem 0.5625rem; }
+
 .g-full-width, .banner__img, .g-table {
   width: 100%;
   box-sizing: border-box; }
 
-.g-max-full-width, .b-about__img, .banner-alt__img, .posts-list__img {
+.g-max-full-width, img.g-img-left, img.g-img-right, .b-about__img, .banner-alt__img, .posts-list__img {
   max-width: 100%;
   box-sizing: border-box; }
 
