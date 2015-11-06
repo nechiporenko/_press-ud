@@ -92,14 +92,16 @@ jQuery(document).ready(function ($) {
     // Десктоп меню (выпадайки)
     //---------------------------------------------------------------------------------------
     var initDesktopMenu = (function () {
-        $('.js-menu li').hover(function () {
-            $(this).find('ul:first').stop(true, true).fadeIn('fast');
-            $(this).find('a').filter(':first').addClass('hover');
-        },
-        function () {
-            $(this).find('ul').stop(true, true).fadeOut('slow');
-            $(this).find('a').filter(':first').removeClass('hover');
-        });
+        $('.js-menu li').on({
+            mouseenter: function () {
+                $(this).find('ul:first').stop(true, true).fadeIn('fast');
+                $(this).find('a:first').addClass('hover');
+            },
+            mouseleave: function () {
+                $(this).find('ul').stop(true, true).fadeOut('slow');
+                $(this).find('a:first').removeClass('hover');
+            }
+        })
     })();
 
     //
@@ -131,18 +133,21 @@ jQuery(document).ready(function ($) {
         });
     })();
 
+
     //
     // Переключатель языка
     //---------------------------------------------------------------------------------------
     var langList = {
         showList: function () {
-            $('.js-switcher').find('button').addClass('active');
-            $('.js-switcher').find('ul').slideDown();
+            var $el = $('.js-switcher');
+            $el.find('button').addClass('active');
+            $el.find('ul').slideDown();
             closeLangList();
         },
         hideList: function () {
-            $('.js-switcher').find('button').removeClass('active');
-            $('.js-switcher').find('ul').hide();
+            var $el = $('.js-switcher');
+            $el.find('button').removeClass('active');
+            $el.find('ul').hide();
             $body.unbind('click', this.hideList);
         }
     }
@@ -171,10 +176,15 @@ jQuery(document).ready(function ($) {
     var showFormNotice = (function () {
         var $notice = $('.js-notice');
         $notice.append('<a class="g-notice__close"><i class="icon-cancel"></i></a>'); //иконка закрытия
+        
         $notice.on('click', '.g-notice__close', function (e) {//закроем блок по клику на иконку
             e.preventDefault();
-            $(this).parent('div').fadeOut();
+            closeNotice($(this));
         });
+
+        function closeNotice(el) {
+            el.parent('div').fadeOut();
+        }
     }());
 
     //
@@ -201,10 +211,10 @@ jQuery(document).ready(function ($) {
     // Галерея изображений
     //---------------------------------------------------------------------------------------
     function initImgGallery() {
-        $('.js-gallery a').lightbox({ blur: false });
+        $('.js-gallery a').lightbox({ blur: false });//подключаем лайтбокс
     }
 
-    if ($('.js-gallery').length > 0) {
+    if ($('.js-gallery').length) {
         initImgGallery();
     }
 
@@ -215,7 +225,6 @@ jQuery(document).ready(function ($) {
         $('.js-video a').each(function () {//для каждого блока подгрузим превью видео
             var link = $(this).attr('href'),
                 id = getYoutubeID(link);
-            console.log(getYoutubeThumb(id));
             if (id) {
                 $(this).css('background-image', 'url(' + getYoutubeThumb(id) + ')');
             }
@@ -249,7 +258,7 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    if ($('.js-video').length > 0) {
+    if ($('.js-video').length) {
         initVideoGallery();
     }
 
