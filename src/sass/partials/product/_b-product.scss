@@ -1,0 +1,50 @@
+﻿@import "../../modules/_base.scss";
+/*Product List Block*/
+.b-product{
+    background:#f7f7f7;
+    border:1px solid #f7f7f7;
+    @include transition-property(border-color);
+    @include transition-duration(.2s);
+    position:relative;
+
+    &:hover{
+        border-color:$primary;
+    }
+
+    a{
+        text-decoration:none;
+    }
+}
+.b-product__link{
+    display:block;
+    padding-top:100%;
+    position:relative;
+}
+.b-product__img{
+    @extend .g-img-centered;
+    max-width:92%;
+    max-height:92%;
+}
+.b-product__caption{
+    box-sizing:border-box;
+    @include px2rem(padding-bottom, 32px);
+}
+.b-product__title{
+    display:block;
+    @include px2rem(padding, 0 10px);
+    @include font-size(16px);
+    color:$primary-alt;
+    text-align:center;
+}
+.b-product__btn{
+    display:block;
+    @include px2rem(width, 30px);
+    @include px2rem(height, 30px);
+    @include px2rem(line-height, 30px);
+    background:$primary;
+    color:#fff;
+    text-align:center;
+    @include font-size(16px);
+    position:absolute;
+    bottom:0; right:0;
+}

@@ -1,0 +1,73 @@
+﻿@import "../modules/_base.scss";
+
+@import "product/_product-category-list.scss";
+@import "product/_b-product.scss";
+
+/*Product Category Title*/
+.category-title{
+    @extend .g-title-h1;
+    font-family:$font-semibold;
+    font-weight:normal;
+    letter-spacing:0;
+    @include font-size(16px);
+    color:$primary-alt;
+}
+
+/*Product List*/
+$list-gutter:3.22%;
+
+.product-list{
+    list-style-type:none;
+    padding:0;
+    @extend .g-clearfix;
+}
+.product-list__item{
+    min-height:0.01%;
+    float:left;
+    width:100%;
+    
+
+    @include media($mobile){
+        width:(100%-$grid-gutter)/2;
+        margin-left:$grid-gutter;
+
+        &:nth-child(2n+1){
+            margin-left:0;
+            clear:left;
+        }
+    }
+
+    @include media($tablet){
+        width:(100%-$list-gutter)/2;
+        margin-left:$list-gutter;
+    }
+
+    @include media($desktop){
+        width:(100%-$list-gutter*2)/3;
+
+        &:nth-child(2n+1){
+            margin-left:$list-gutter;
+            clear:none;
+        }
+        
+        &:nth-child(3n+1){
+            margin-left:0;
+            clear:left;
+        }
+
+        &.last{
+            margin-left:0; //ie8
+        }
+    }
+}
+
+/*SEO Title*/
+.category-seo-title{
+    @extend .g-title-h1;
+    @include px2rem(margin, 0 -20px 18px);
+    @include px2rem(padding, 8px 20px);
+    @include font-size(18px);
+    text-transform:none;
+    color:#fff;
+    background:$primary-alt;
+}

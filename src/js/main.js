@@ -9,6 +9,7 @@
 // Галерея видео
 // Модальное окно
 // Если браузер не знает о svg-картинках
+// ie8
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -266,9 +267,13 @@ jQuery(document).ready(function ($) {
             return $(this).attr('src').replace('.svg', '.png');
         });
     }
-
+    //
+    // ie8
+    //---------------------------------------------------------------------------------------
     if ($('html').hasClass('lt-ie9')) {
+        $('.product-cat-list li').filter(':nth-child(4n+1)').addClass('last');
         $('.js-gallery li').filter(':nth-child(4n+1)').addClass('last');
         $('.js-video li').filter(':nth-child(4n+1)').addClass('last');
+        $('.product-list li').filter(':nth-child(3n+1)').addClass('last');
     }
 });
