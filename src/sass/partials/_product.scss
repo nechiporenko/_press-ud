@@ -2,6 +2,8 @@
 
 @import "product/_product-category-list.scss";
 @import "product/_b-product.scss";
+@import "product/_product-images.scss";
+@import "product/_product-description.scss";
 
 /*Product Category Title*/
 .category-title{
@@ -61,8 +63,8 @@ $list-gutter:3.22%;
     }
 }
 
-/*SEO Title*/
-.category-seo-title{
+/*SEO Product Title*/
+.product-seo-title{
     @extend .g-title-h1;
     @include px2rem(margin, 0 -20px 18px);
     @include px2rem(padding, 8px 20px);
@@ -70,4 +72,22 @@ $list-gutter:3.22%;
     text-transform:none;
     color:#fff;
     background:$primary-alt;
+}
+
+/*Single Product Grid*/
+.product-images,
+.product-description{
+    @extend .g-col;
+}
+
+.product-images{
+    @include media($tablet){
+        width:43.8%;
+    }
+}
+.product-description{
+    @include media($tablet){
+        width:52.98%;
+        margin-left:3.22%;
+    }
 }

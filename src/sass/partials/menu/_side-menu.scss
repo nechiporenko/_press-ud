@@ -90,6 +90,10 @@
 
     &:hover,
     &:active{
-        text-decoration:underline;
+        color:$primary;
     }
+}
+.side-submenu__link--current{
+    color:$primary;
+    cursor:default;
 }

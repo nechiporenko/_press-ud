@@ -1,0 +1,26 @@
+﻿@import "../../modules/_base.scss";
+/*Single Product Description*/
+.product-title{
+    @extend .g-title-h1;
+    color:$primary;
+    font-family:$font-semibold;
+    font-weight:normal;
+    letter-spacing:0;
+}
+.product-table{
+    @extend .g-full-width;
+
+    th, td{
+        @include px2rem(padding, 9px 20px);
+    }
+    tr:nth-child(2n+1){
+        background:#f7f7f7;
+    }
+    tr.alt{
+        background:#f7f7f7; //ie8
+    }
+}
+
+.product-table__title{
+    text-transform:uppercase;
+}

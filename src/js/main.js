@@ -6,6 +6,7 @@
 // Сообщения об отправке формы
 // Кнопка скролла страницы
 // Галерея изображений
+// Лайтбокс
 // Галерея видео
 // Модальное окно
 // Если браузер не знает о svg-картинках
@@ -147,6 +148,11 @@ jQuery(document).ready(function ($) {
     }
 
     //
+    // Лайтбокс
+    //---------------------------------------------------------------------------------------
+    $('.js-popup').lightbox({ blur: false });
+
+    //
     // Галерея видео
     //---------------------------------------------------------------------------------------
     function initVideoGallery() {
@@ -275,5 +281,6 @@ jQuery(document).ready(function ($) {
         $('.js-gallery li').filter(':nth-child(4n+1)').addClass('last');
         $('.js-video li').filter(':nth-child(4n+1)').addClass('last');
         $('.product-list li').filter(':nth-child(3n+1)').addClass('last');
+        $('.product-table tr').filter(':nth-child(2n+1)').addClass('alt');
     }
 });
