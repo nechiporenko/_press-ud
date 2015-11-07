@@ -15,7 +15,7 @@
     <![endif]-->
 </head>
 <body>
-    <header class="header">
+    <header class="header" role="banner">
         <div class="header__container">
             <div class="header__top">
                 <a href="index.html" class="header__logo">Logo Text</a>
@@ -46,7 +46,7 @@
                     </form>
                 </div><!--/header__controls-->
             </div><!--/header__top-->
-            <nav class="header__menu">
+            <nav class="header__menu" role="navigation">
                 <ul class="menu js-menu">
                     <li class="menu__item">
                         <a href="index.html" class="menu__link">Главная</a>
@@ -92,8 +92,8 @@
             </nav>
         </div><!--/header__container-->
     </header>
-    <main class="page">
-        <article class="page__full">
+    <main class="page" role="main">
+        <section class="page__full">
             <h1 class="page__title">Гарантии</h1>
             <ol class="breadcrumbs">
                 <li class="breadcrumbs__item" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -113,21 +113,23 @@
             <figure class="banner-alt">
                 <img src="img/guarantees.png" class="banner-alt__img" alt="Guarantees" />
             </figure>
-            <h2 class="g-title-alt">Условия гарантии</h2>
-            <ul class="g-styled-list">
-                <li class="g-styled-list__item">ЧП «Брикетирующее технологии» предоставляет 12 месяцев гарантии на безаварийную работу пресса ударно-механического при использовании его по назначению и согласно инструкции.</li>
-                <li class="g-styled-list__item">Гарантия не распространяется на неисправности, которые являются результатом неправильной эксплуатации, неправильного запуска с нарушением требований использованием частей которые не являются частями производителя.</li>
-                <li class="g-styled-list__item">Гарант не несет ответственности за износ частей и изнашиваемых элементов при нормальной эксплуатации.</li>
-            </ul>
-            <h3 class="g-title-alt">Сроки исполнения заказа</h3>
-            <ul class="g-styled-list">
-                <li class="g-styled-list__item">Для заказа оборудования производится предоплата в размере 50%.</li>
-                <li class="g-styled-list__item">Гарантия не распространяется на неисправности, которые являются результатом неправильной эксплуатации, неправильного запуска с нарушением требований использованием частей которые не являются частями производителя.</li>
-                <li class="g-styled-list__item">Срок изготовления оборудования, в зависимости от Вашего выбора, составляет от 3 до 4  месяцев с момента предоплаты.</li>
-            </ul>
-        </article>
+            <article>
+                <h2 class="g-title-alt">Условия гарантии</h2>
+                <ul class="g-styled-list">
+                    <li class="g-styled-list__item">ЧП «Брикетирующее технологии» предоставляет 12 месяцев гарантии на безаварийную работу пресса ударно-механического при использовании его по назначению и согласно инструкции.</li>
+                    <li class="g-styled-list__item">Гарантия не распространяется на неисправности, которые являются результатом неправильной эксплуатации, неправильного запуска с нарушением требований использованием частей которые не являются частями производителя.</li>
+                    <li class="g-styled-list__item">Гарант не несет ответственности за износ частей и изнашиваемых элементов при нормальной эксплуатации.</li>
+                </ul>
+                <h3 class="g-title-alt">Сроки исполнения заказа</h3>
+                <ul class="g-styled-list">
+                    <li class="g-styled-list__item">Для заказа оборудования производится предоплата в размере 50%.</li>
+                    <li class="g-styled-list__item">Гарантия не распространяется на неисправности, которые являются результатом неправильной эксплуатации, неправильного запуска с нарушением требований использованием частей которые не являются частями производителя.</li>
+                    <li class="g-styled-list__item">Срок изготовления оборудования, в зависимости от Вашего выбора, составляет от 3 до 4  месяцев с момента предоплаты.</li>
+                </ul>
+            </article>
+        </section>
     </main><!--/page-->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer__top">
             <div class="footer__container">
                 <div class="footer__main">
