@@ -1,7 +1,7 @@
 ﻿/* Desktop Menu */
 @import "../../modules/_base.scss";
 .menu{
-    display:table;
+    display:none;
     table-layout:fixed;
     width:100%;
     line-height:100%;
@@ -9,6 +9,10 @@
     z-index:1000;
     @extend .g-clear-list;
     box-sizing:border-box;
+
+    @include media(min-width $menu-breakpoint){
+        display:table;
+    }
 }
 
 .menu__item{
@@ -105,16 +109,12 @@
 }
 
 
-/* responsive menu styles */
+/* mobile menu styles */
 .slicknav_menu {
 	display:none;
 }
 
-@media screen and (max-width: $menu-breakpoint) {
-	.js .js-menu {
-		display:none;
-	}
-	
+@media screen and (max-width: $menu-breakpoint - 1px) {
 	.js .slicknav_menu {
 		display:block;
 	}
@@ -122,11 +122,6 @@
 
 /*Footer menu*/
 .menu--bottom{
-    display:none;
-    @include media($tablet){
-        display:table;
-    }
-
     .menu__item{
         border:none;
     }
