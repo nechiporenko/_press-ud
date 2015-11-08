@@ -8,12 +8,13 @@
     @include hide-text;
     background-image:url(../img/logo.svg);
     background-repeat:no-repeat;
-    background-size:contain;
+    background-size:60px 60px;
     
     @include media($mobile){
         @include px2rem(width, 90px);
         @include px2rem(height, 90px);
         @include px2rem(margin-bottom, 9px);
+        background-size:90px 90px;
     }   
 
     @include media($desktop){
