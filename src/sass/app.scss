@@ -7,10 +7,9 @@
 
 //grid & utilities
 @import "modules/grid";
+@import "modules/utilities";
 @import "modules/button";
 @import "modules/forms";
-@import "modules/utilities";
-
 
 //page parts
 @import "partials/header";
@@ -23,6 +22,7 @@
 //other parts
 @import "modules/tables";
 @import "modules/modal";
+@import "modules/print";
 
 //plugins vendors
 @import "vendor/vendor";
