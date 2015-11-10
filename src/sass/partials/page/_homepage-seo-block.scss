@@ -1,0 +1,11 @@
+﻿@import "../../modules/_base.scss";
+/*Homepage Seo Block*/
+.b-seo{
+    @include px2rem(margin-top, 18px);
+    @include px2rem(padding, 0 20px 18px);
+    background:#fff;
+    @include font-size(14px);
+}
+.b-seo__title{
+    @extend .product-seo-title;
+}
