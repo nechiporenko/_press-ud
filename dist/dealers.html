@@ -105,19 +105,87 @@
                     <span>Дилеры</span>
                 </li>
             </ol>
-            <article>
-                <h2 class="g-title-h2">Дилер 1</h2>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </article>
-            <article>
-                <h2 class="g-title-h2">Дилер 2</h2>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </article>
-            <article>
-                <h2 class="g-title-h2">Дилер 3</h2>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-            </article>
+            <ul class="dealer-list">
+                <li class="dealer-list__item">
+                    <article class="dealer" data-match-height>
+                        <h2 class="dealer__title">ООО «Биотехнология»</h2>
+                        <p>Армения, г.Степанокерт</p>
+                        <ul class="dealer-contacts">
+                            <li class="dealer-contacts__item">
+                                Паскаль Сергей
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="tel:+37497209911" class="dealer-contacts__link">Тел: +(374 9) 720 99 11</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="mailto:g73@mail.ru" class="dealer-contacts__link">Email: g73@mail.ru</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="dealer-list__item">
+                    <article class="dealer" data-match-height>
+                        <h2 class="dealer__title">ООО «Белтехагропласт»</h2>
+                        <p>Белоруссия, г.Минск</p>
+                        <ul class="dealer-contacts">
+                            <li class="dealer-contacts__item">
+                                Паскаль Сергей
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="tel:+37497209911" class="dealer-contacts__link">Тел: +(374 9) 720 99 11</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="mailto:g73@mail.ru" class="dealer-contacts__link">Email: g73@mail.ru</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="dealer-list__item">
+                    <article class="dealer" data-match-height>
+                        <h2 class="dealer__title">ООО «Белтехагропласт»</h2>
+                        <p>Румыния, г.Бухарест</p>
+                        <ul class="dealer-contacts">
+                            <li class="dealer-contacts__item">
+                                Паскаль Сергей
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="tel:+37497209911" class="dealer-contacts__link">Тел: +(374 9) 720 99 11</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="mailto:g73@mail.ru" class="dealer-contacts__link">Email: g73@mail.ru</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="http://google.com" class="dealer-contacts__url">www.google.com</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+                <li class="dealer-list__item">
+                    <article class="dealer" data-match-height>
+                        <h2 class="dealer__title">ООО «Белтехагропласт»</h2>
+                        <p>Россия, г.Воронеж</p>
+                        <ul class="dealer-contacts">
+                            <li class="dealer-contacts__item">
+                                Финансовый директор
+                            </li>
+                            <li class="dealer-contacts__item">
+                                Паскаль Сергей
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="tel:+37497209911" class="dealer-contacts__link">Тел: +(374 9) 720 99 11</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="mailto:g73@mail.ru" class="dealer-contacts__link">Email: g73@mail.ru</a>
+                            </li>
+                            <li class="dealer-contacts__item">
+                                <a href="http://google.com" class="dealer-contacts__url">www.google.com</a>
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            </ul>
         </section>
+        <div class="map" id="map"></div>
     </main><!--/page-->
     <footer class="footer" role="contentinfo">
         <div class="footer__top">
@@ -250,5 +318,85 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
     <script src="js/app.min.js"></script>
+    <script>
+    function initialize() {
+
+        var mapOptions = {
+            zoom: 4,
+            center: { lat: 50.440374, lng: 30.478355 },
+            panControl: false,
+            zoomControl: true,
+            scrollwheel: false,
+            streetViewControl: false,
+            scaleControl: true,
+            mapTypeId: google.maps.MapTypeId.ROAD
+        };
+
+        var styles = [
+          {
+              stylers: [
+                { hue: "#00ffe6" },
+                { saturation: -20 }
+              ]
+          }, {
+              featureType: "all",
+              elementType: "all",
+              stylers: [
+                { saturation: -60 }
+              ]
+          }
+        ];
+
+
+        var map = new google.maps.Map(document.getElementById('map'),
+            mapOptions);
+
+        map.setOptions({ styles: styles });
+
+        
+        var dealers = [
+          ['Армения', 40.292664, 44.939471, 1],
+          ['Белоруссия', 53.895275, 27.549866, 1],
+          ['Румыния', 44.434288, 26.102958, 1],
+          ['Россия', 51.661535, 39.200287, 1]
+        ];
+
+        function setMarkers(map) {            
+            var image = {
+                url: 'img/marker.png',
+                size: new google.maps.Size(24, 37),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 37)
+            };
+                        
+            for (var i = 0; i < dealers.length; i++) {
+                var dealer = dealers[i];
+                var marker = new google.maps.Marker({
+                    position: { lat: dealer[1], lng: dealer[2] },
+                    map: map,
+                    icon: image,
+                    title: dealer[0],
+                    zIndex: dealer[3]
+                });
+            }
+        }
+
+        setMarkers(map);
+
+    }
+
+    function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+            'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    window.onload = loadScript;
+    </script>
+
+
+
 </body>
 </html>

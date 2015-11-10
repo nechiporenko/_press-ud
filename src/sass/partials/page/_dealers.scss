@@ -1,0 +1,60 @@
+﻿@import "../../modules/_base.scss";
+/*Dealers Section*/
+.dealer-list{
+    list-style-type:none;
+    padding:0;
+    @extend .g-clearfix;
+    @include media($desktop){
+        @include px2rem(padding, 0 85px);
+    }
+}
+$list-gutter:2.93%;
+
+.dealer-list__item{
+    @include media($desktop){
+        float:left;
+        width:(100%-$list-gutter)/2;
+        margin-left:$list-gutter;
+
+        &:nth-child(2n+1){
+            margin-left:0;
+            clear:left;
+        }
+    }
+}
+
+.dealer{
+    @include px2rem(margin-bottom, 18px);
+    @include px2rem(padding, 18px);
+    box-sizing:border-box;
+    background:#e8e8e8;
+    @include font-size(14px);
+    color:$text-color-dark;
+
+    @include media($tablet){
+        @include px2rem(padding-left, 50px);
+    }
+}
+.dealer__title{
+    @extend .g-title-alt;
+}
+
+.dealer-contacts{
+    @extend .g-clear-list;
+}
+.dealer-contacts__link,
+.dealer-contacts__url{
+    text-decoration:none;
+    font-family:$font-italic;
+    &:hover,
+    &:active{
+        text-decoration:underline;
+    }
+}
+.dealer-contacts__link{
+    color:$text-color-dark;
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}

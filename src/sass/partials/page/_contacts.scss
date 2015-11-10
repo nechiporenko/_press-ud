@@ -60,7 +60,10 @@
 /*Google Map*/
 .map{
     @include px2rem(height, 360px);
+    @include px2rem(margin-bottom, 18px);
     background:#e8e8e8;
+    position:relative;
+
     @include media($desktop){
         @include px2rem(height, 414px);
     }
