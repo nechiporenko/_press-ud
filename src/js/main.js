@@ -9,6 +9,7 @@
 // Лайтбокс
 // Галерея видео
 // Модальное окно
+// Слайдер категорий (если категорий будет больше чем 4)
 // Если браузер не знает о svg-картинках
 // ie8
 
@@ -264,6 +265,63 @@ jQuery(document).ready(function ($) {
         var link = $(this).data('modal');
         if (link) { showModal.open(link); }
     });
+
+    //
+    // Слайдер категорий (если категорий будет больше чем 4)
+    //---------------------------------------------------------------------------------------
+    function initCategorySlider() {
+        var $slider = $('.js-slider'),
+            getSliderSettings = function () {//будем показывать разное кол-во слайдов на разных разрешениях
+                var setting,
+                    settings1 = {
+                        maxSlides: 1,
+                    },
+                    settings2 = {
+                        maxSlides: 2,
+                    },
+                    settings3 = {
+                        maxSlides: 3,
+                    },
+                    settings4 = {
+                        maxSlides: 4,
+                    },
+                    common = {
+                        minSlides: 1,
+                        moveSlides: 1,
+                        slideWidth: 222,
+                        slideMargin: 24,
+                        auto: false,
+                        pager: false,
+                        infiniteLoop: true,
+                        hideControlOnEnd: false
+                    },
+                    winW = $window.width();
+                if (winW < 550) {
+                    setting = $.extend(settings1, common);
+                }
+                if (winW >= 550 && winW < 800) {
+                    setting = $.extend(settings2, common);
+                }
+                if (winW >= 800 && winW < 1000) {
+                    setting = $.extend(settings3, common);
+                }
+                if (winW >= 1000) {
+                    setting = $.extend(settings4, common);
+                }
+                return setting;
+            }
+        $slider = $slider.bxSlider(getSliderSettings()); //запускаем слайдер
+
+        $window.on('resize', function () {
+            setTimeout(recalcSliderSettings, 500);
+        });
+
+        function recalcSliderSettings() {
+            $slider.reloadSlider($.extend(getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
+        }
+    }
+    if($('.js-slider').length){initCategorySlider()}
+
 
     //
     // Если браузер не знает о svg-картинках

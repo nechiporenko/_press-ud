@@ -1,0 +1,157 @@
+﻿@import "../../modules/base";
+/** BX Slider **/
+
+$loader:   '../img/loader.gif';
+
+//layout
+.bx-wrapper {
+	position: relative;
+    @include px2rem(margin, 0 auto);
+	padding: 0;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+
+.bx-viewport {
+	//fix other elements on the page moving (on Chrome)
+	-webkit-transform: translatez(0);
+}
+
+// THEME
+
+.bx-wrapper {
+	.bx-pager,
+	.bx-controls-auto {
+		position: absolute;
+        @include px2rem(bottom, $project-line-height);
+		width: 100%;	
+	}
+}
+
+// LOADER
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url($loader) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+// PAGER
+.bx-wrapper {
+	.bx-pager {
+		text-align: center;
+		font-size: .85em;
+		font-family: Arial;
+		font-weight: bold;
+		color: $primary;
+        display:none;
+
+        @include media($tablet){
+            display:block;
+        }
+
+
+		&.bx-default-pager a {
+			background: $primary;
+			@include hide-text();
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin: 0 5px;
+			outline: 0;
+			border-radius: 5px;
+			&:hover,
+			&.active,
+			&:focus {
+				background: #fff;
+			}
+		}
+	}
+	.bx-pager-item,
+	.bx-controls-auto .bx-controls-auto-item {
+		display: inline-block;
+	}
+	.bx-pager-item {
+		font-size: 0;
+		line-height: 0;
+	}
+}
+
+// DIRECTION CONTROLS (NEXT / PREV)
+.bx-wrapper {
+	.bx-prev {
+		left: -30px;
+        background-image:url(../img/arrow-left.svg);
+
+        
+	}
+	.bx-next {
+		right: -30px;
+        background-image:url(../img/arrow-right.svg);
+
+        
+	}
+	.bx-controls-direction a {
+		position: absolute;
+		top: 72px;
+		outline: 0;
+		width: 20px;
+		height: 36px;
+        @include hide-text;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+		z-index: 200;
+        opacity:.7;
+        @include transition(opacity .3s ease);
+        display:block;
+
+
+        &:hover,
+        &:active{
+            opacity:1;
+        }
+
+		&.disabled {
+			opacity:.1;
+		}
+	}
+}
+
+@include media($desktop){
+    .bx-wrapper{
+        .bx-prev{
+            left:0;
+        }
+        .bx-next{
+            right:0;
+        }
+    }
+}
+
+@include media(min-width em(1200)){
+    .bx-wrapper{
+        .bx-prev{
+            left:-40px;
+        }
+        .bx-next{
+            right:-40px;
+        }
+    }
+}
+
+.no-svg .bx-wrapper{
+    .bx-prev{
+        background-image:url(../img/arrow-left.png);
+    }
+    .bx-next{
+        background-image:url(../img/arrow-right.png);
+    }
+    &.disabled {
+		display:none;
+	}
+}

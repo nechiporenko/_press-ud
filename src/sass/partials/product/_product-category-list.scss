@@ -77,3 +77,12 @@
     color:#fff;
     @include font-size(14px);
 }
+
+
+/*Homepage Products Category Blocks - Slider version*/
+.product-cat-slider{
+    .product-cat-list__item{
+        margin-left:0;
+        clear:none;
+    }
+}
